@@ -1,30 +1,35 @@
-# Anomaly Detection in Well Log Data
+# 🛢️ Machine Learning-Based Anomaly Detection in Well Log Data
 
-## Project Overview
-This repository contains code, data, and reports for detecting anomalies in well log data using machine learning techniques. The project explores multiple approaches including Autoencoder and Isolation Forest models to identify irregularities in well measurements.
+## 🔍 Project Overview
+This project presents a **prototype application** for detecting anomalies in **well log data** using **Machine Learning (ML)** techniques.  
+The goal is to identify irregular readings in geophysical well logs that may indicate lithological changes, borehole instability, or sensor errors.  
+
+Two complementary models were implemented:
+- **Isolation Forest (IF)** – a tree-based unsupervised algorithm that isolates outliers efficiently.  
+- **Autoencoder (AE)** – a neural network-based approach that reconstructs normal patterns and flags deviations as anomalies.  
+
+Both methods were compared across multiple wells to assess performance, anomaly overlap, and feature influence.
 
 ---
 
-## Contents
+## 📁 Repository Structure
 
 | Folder/File | Description |
-|------------|-------------|
+|--------------|-------------|
 | `plots/` | Contains visualizations and plots generated during analysis. |
-| `Anomalies_All_Wells.xlsx` | Excel file summarizing detected anomalies across all wells. |
-| `Anomaly Detection.ipynb` | Jupyter notebook with general anomaly detection workflow. |
-| `Anomaly_Detection_Isolation_Forest.ipynb` | Notebook implementing Isolation Forest-based anomaly detection. |
-| `Auto.ipynb` | Notebook implementing Autoencoder-based anomaly detection. |
-| `Well_1_cleaned.csv`, `Well_2_cleaned.csv`, etc. | Cleaned well log data for analysis. |
-| `autoencoder_model.h5` | Trained Autoencoder model for anomaly detection. |
-| `*.pdf` | Various reports summarizing the results of the analysis. |
-| `Anomaly_Summary_All_Wells.csv` | CSV summary of anomalies detected in all wells. |
+| `data/` | Cleaned well log datasets (`Well_1_cleaned.csv`, `Well_2_cleaned.csv`, etc.). |
+| `models/autoencoder_model.h5` | Trained Autoencoder model for anomaly detection. |
+| `notebooks/Anomaly_Detection_Isolation_Forest.ipynb` | Isolation Forest anomaly detection workflow. |
+| `notebooks/Autoencoder_Anomaly_Detection.ipynb` | Autoencoder training and reconstruction analysis. |
+| `Anomalies_All_Wells.xlsx` | Detailed metrics of anomalies for each well. |
+| `Anomaly_Summary_All_Wells.csv` | Consolidated summary of anomaly results across all wells. |
+| `Prototype_Report.pdf` | Final report (includes plots, tables, and visual validation). |
 
 ---
 
-## Installation
-
-1. Clone the repository:
+## ⚙️ Installation & Setup
 
 ```bash
 git clone https://github.com/uzakariyya/Anomaly-Detection-Model.git
 cd Anomaly-Detection-Model
+pip install -r requirements.txt
